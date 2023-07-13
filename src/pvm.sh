@@ -72,7 +72,7 @@ function show_available {
 
 function show_installed {
     cd "${BASE_DIR}"
-    ls -1
+    ls -1d */ | sed 's#/##'
 }
 
 
