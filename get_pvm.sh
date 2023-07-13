@@ -13,5 +13,5 @@ cat << EOF
 Installation complete.
 Installed at ~/.local/bin, to remove, simply delete ~/.local/bin/pvm and ~/.local/bin/poetry
 
-You should add ~/.local/bin to your ${PATH}, then you can use `pvm` and `poetry`
+You should add ~/.local/bin to your '${PATH}', then you can use "pvm" and "poetry"
 EOF
