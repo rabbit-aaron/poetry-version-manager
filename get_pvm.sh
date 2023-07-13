@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 
 set -ue
-git clone https://github.com/rabbit-aaron/poetry-version-manager /tmp/pvm
+
 mkdir -p ~/.local/bin
-
-cp /tmp/pvm/src/pvm.sh ~/.local/bin/pvm
-cp /tmp/pvm/src/shim.sh ~/.local/bin/poetry
-
-rm -rf /tmp/pvm
+curl -s https://raw.githubusercontent.com/rabbit-aaron/poetry-version-manager/main/src/pvm.sh > ~/.local/bin/pvm
+curl -s https://raw.githubusercontent.com/rabbit-aaron/poetry-version-manager/main/src/shim.sh > ~/.local/bin/poetry
+chmod +x ~/.local/bin/pvm ~/.local/bin/poetry
 
 cat << EOF
 Installation complete.
 Installed at ~/.local/bin, to remove, simply delete ~/.local/bin/pvm and ~/.local/bin/poetry
 
-You should add ~/.local/bin to your '${PATH}', then you can use "pvm" and "poetry"
+You should add ~/.local/bin to your PATH environment variable, then you can use "pvm" and "poetry"
 EOF

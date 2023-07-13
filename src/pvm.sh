@@ -46,7 +46,6 @@ function remove {
   local INSTALL_DIR="${BASE_DIR}/${VERSION}"
   _ensure_version_installed "${VERSION}"
   rm -rf "${INSTALL_DIR}"
-  cd "${INSTALL_DIR}"
   echo "poetry ${VERSION} has been removed"
 }
 
