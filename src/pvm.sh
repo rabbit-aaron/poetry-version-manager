@@ -60,7 +60,7 @@ function set_local {
 function set_global {
   local VERSION="${1}"
   _ensure_version_installed "${VERSION}"
-  ln -s "${BASE_DIR}/${VERSION}/bin/poetry" "${BASE_DIR}/global"
+  ln -sf "${BASE_DIR}/${VERSION}/bin/poetry" "${BASE_DIR}/global"
   echo "poetry ${VERSION} has been set to global"
 }
 
