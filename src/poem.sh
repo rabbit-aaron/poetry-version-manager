@@ -3,7 +3,7 @@
 set -ue
 
 
-BASE_DIR=~/.local/tools/pvm/poetry
+BASE_DIR=~/.local/tools/poem/poetry
 
 
 function _check_version {
@@ -78,8 +78,8 @@ function show_installed {
 
 function usage {
 cat << EOF
-usage: pvm [install|remove|local|global] [version]
-pvm [show_installed|show_available]
+usage: poem [install|remove|local|global] [version]
+poem [show_installed|show_available]
 EOF
 }
 

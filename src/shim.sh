@@ -3,7 +3,7 @@
 set -ue
 
 
-BASE_DIR=~/.local/tools/pvm/poetry
+BASE_DIR=~/.local/tools/poem/poetry
 
 
 function _ensure_version_installed {
