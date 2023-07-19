@@ -28,6 +28,7 @@ function _find_executable {
     POETRY="${BASE_DIR}/global"
     REAL_LINK=$(readlink "${POETRY}")
     LINK_DIR=$(dirname "${REAL_LINK}")
+    LINK_DIR=$(dirname "${REAL_LINK}")
     export VIRTUAL_ENV=${LINK_DIR}
     if [ ! -f "${POETRY}" ]; then
       echo "Global poetry version has not been set" > /dev/stderr
