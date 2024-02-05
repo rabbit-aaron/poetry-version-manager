@@ -72,7 +72,16 @@ function show_available {
 
 function show_installed {
     cd "${BASE_DIR}"
-    ls -1d */ | sed 's#/##'
+    OUTPUT=$(ls -1d */ | sed 's#/##')
+    if [ -f "${BASE_DIR}/global" ]; then
+      GLOBAL_POETRY=$(readlink "${BASE_DIR}/global")/../..
+      GLOBAL_POETRY=$(realpath "${GLOBAL_POETRY}")
+      PREFIX="${BASE_DIR}/"
+      GLOBAL_VERSION="${GLOBAL_POETRY//${PREFIX}/}"
+
+      OUTPUT="${OUTPUT//${GLOBAL_VERSION}/${GLOBAL_VERSION} <- global}"
+    fi
+    echo "${OUTPUT}"
 }
 
 
