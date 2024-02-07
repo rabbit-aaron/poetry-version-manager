@@ -46,8 +46,7 @@ Set current project's `poetry` version:
 # run in the same folder as pyproject.toml
 poem local <version_number>
 # a `.poetry-version` file will be created with the <version_number> as its content
-# note that unlike pyenv, poem only check `.poetry-version` in the same folder as `pyproject.toml`
-# it does not check parent directories.
+# it now checks parent directories just like pyenv
 ```
 
 Set global `poetry` version:
