@@ -22,13 +22,13 @@ function _find_executable {
   VERSION=$(python "${FINDER_SCRIPT}")
   if [ ! -z "${VERSION}" ]; then
     _ensure_version_installed "${VERSION}"
-    export VIRTUAL_ENV=${BASE_DIR}/${VERSION}
+#    export VIRTUAL_ENV=${BASE_DIR}/${VERSION}
     POETRY="${BASE_DIR}/${VERSION}/bin/poetry"
   else
     POETRY="${BASE_DIR}/global"
     REAL_LINK=$(readlink "${POETRY}")
     LINK_DIR=$(dirname "${REAL_LINK}")
-    export VIRTUAL_ENV=${LINK_DIR}
+#    export VIRTUAL_ENV=${LINK_DIR}
     if [ ! -f "${POETRY}" ]; then
       echo "Global poetry version has not been set" > /dev/stderr
       exit 1
